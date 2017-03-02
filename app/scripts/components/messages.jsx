@@ -14,8 +14,11 @@ class MessagesContainer extends React.Component {
     this.sendMessage = this.sendMessage.bind(this);
   }
   sendMessage(message) {
+    var loggedInUser = localStorage.getItem('user');
+    loggedInUser = JSON.parse(loggedInUser);
+    loggedInUser.username;
     var messageList = this.state.messageCollection;
-    messageList.user = localStorage.getItem('username');
+    message.user = loggedInUser.username;;
     messageList.create(message);
     this.setState({messageCollection: messageList});
     console.log(messageList);

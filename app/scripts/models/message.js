@@ -7,7 +7,7 @@ loggedInUser.username;
 var Message = Backbone.Model.extend({
  idAttribute: "_id",
  defaults: {
-   user: loggedInUser.username
+   user: 'anonymous'
  }
 });
 
