@@ -5,6 +5,9 @@ class LoginContainer extends React.Component {
     super(props);
 
   }
+  createAccount(){
+
+  }
   render(){
     return (
     <div>
@@ -37,24 +40,8 @@ class LoginContainer extends React.Component {
             </form>
           </div>
 
-          <div className="col-md-6">
-            <h1>No Account? Sign up!</h1>
+          <NewAccountContainer createAccount={this.createAccount}/>
 
-            <form id="signup">
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input id="signup-email" className="form-control" type="text" name="email" placeholder="Email Address" />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input id="signup-password" className="form-control" type="password" name="password" placeholder="Don't share this" />
-              </div>
-
-              <input className="btn btn-primary" type="submit" value="Sign Up" />
-            </form>
-
-          </div>
         </div>
       </div>
     </div>
@@ -62,6 +49,32 @@ class LoginContainer extends React.Component {
   }
 
 }
+
+class NewAccountContainer extends React.Component {
+  render() {
+    return (
+      <div className="col-md-6">
+        <h1>No Account? Sign up!</h1>
+
+        <form id="signup" onSubmit={this.props.createAccount}>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input id="signup-email" className="form-control" type="text" name="email" placeholder="Email Address" />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input id="signup-password" className="form-control" type="password" name="password" placeholder="Don't share this" />
+          </div>
+
+          <input className="btn btn-primary" type="submit" value="Sign Up" />
+        </form>
+
+      </div>
+    );
+  }
+}
+
 
 module.exports = {
   LoginContainer

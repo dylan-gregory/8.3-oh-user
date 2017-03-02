@@ -78,10 +78,12 @@ if (loggedInUser) {
   $.get(myUrl + '/users/me').then(function(data){
     console.log(data);
 
-    ReactDOM.render(
-      React.createElement(MessagesContainer),
-      document.getElementById('messages')
-    );
+
   });
+
+  ReactDOM.render(
+    React.createElement(MessagesContainer),
+    document.getElementById('messages')
+  );
 
 }
