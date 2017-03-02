@@ -254,10 +254,6 @@ if (loggedInUser) {
 "use strict";
 var Backbone = require('backbone');
 
-var loggedInUser = localStorage.getItem('user');
-loggedInUser = JSON.parse(loggedInUser);
-loggedInUser.username;
-
 var Message = Backbone.Model.extend({
  idAttribute: "_id",
  defaults: {
