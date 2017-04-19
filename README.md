@@ -4,6 +4,7 @@ This was our first look into user authentication and dealing with server-side se
 
 ## Built With
 
+* [React](https://facebook.github.io/react/)
 * [Backbone.js](http://backbonejs.org/)
 * [jQuery](https://jquery.com/)
 * [Bootstrap](http://getbootstrap.com/)
